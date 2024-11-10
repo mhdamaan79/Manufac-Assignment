@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# Manufac Crop Data Analysis - Frontend Developer Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[View the deployed project here ↗️](https://manufac-assignment-tau.vercel.app/)
 
-Currently, two official plugins are available:
+This project was created as part of a frontend developer assignment for Manufac. The objective is to analyze and display Indian agricultural data from 1950-2020, focusing on crop production, yield, and cultivation area. The project presents two main tables: **Maximum and Minimum Crop Production per Year** and **Average Yield and Cultivation Area per Crop**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Folder Structure](#folder-structure)
+- [Getting Started](#getting-started)
+- [Technologies](#technologies)
+- [Screenshot](#screenshot)
 
-## Expanding the ESLint configuration
+## Project Overview
+This application provides insights into agricultural statistics in India through a frontend analysis tool. Using the **Mantine** component library for styling, the app displays data in a clean, organized format, with columns sorted by maximum and minimum production per year, as well as the average yield and area for each crop.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
+- **Maximum and Minimum Production Table**: Displays the crop with the highest and lowest production per year.
+- **Average Yield and Area Table**: Calculates and displays the average yield and cultivation area per crop.
+- **Responsive Layout**: Both tables are centered on the screen and organized in a column layout.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Folder Structure
+```plaintext
+project-root
+├── public
+│   └── index.html                    # Main HTML file
+├── src
+│   ├── components
+│   │   ├── CropAverageTable.tsx      # Component for displaying average yield and area per crop
+│   │   └── MaxMinProductionTable.tsx # Component for displaying max/min production per year
+│   ├── data
+│   │   └── Manufac_India_Agro_Dataset.json # JSON data file with crop statistics
+│   ├── utils
+│   │   ├── dataAggregation.ts        # Data aggregation functions
+│   │   └── types.ts                  # Types
+│   ├── App.tsx                       # Main app component
+│   └── main.tsx                      # Entry point for the React app
+└── README.md                         # Project README
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
+To run the project locally, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/mhdamaan79/Manufac-Assignment.git
+   cd Manufac-Assignment
+   ```
+2. **Install dependencies**:
+   ```bash
+   yarn install
+   ```
+3. **Start the development server**:
+   ```bash
+   yarn dev
+   ```
+   
+## Technologies
+- **React**: For building the user interface.
+- **TypeScript**: To provide type safety.
+- **Mantine**: Used for table components and styling.
+- **Vite**: For fast development and build tooling.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Screenshot
+![screencapture-localhost-5173-2024-11-10-20_00_55](https://github.com/user-attachments/assets/e9efadae-99f1-4bc7-bbaa-82d78b39c073)
+
+## Deployed Link
+[View the deployed project here ↗️](https://manufac-assignment-tau.vercel.app/)
+
