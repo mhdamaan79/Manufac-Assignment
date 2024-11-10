@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title--maxmincrop,
+.title--avgyield {
+  width: 700px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* ----------------------- Maximum and Minimum Crop ----------------------- */
+
+#Crop--maxProd--minProd {
+  font-family: Verdana, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 600px;
+  margin: 10px auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#Crop--maxProd--minProd td,
+#Crop--maxProd--minProd th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#Crop--maxProd--minProd thead tr th:nth-child(2),
+#Crop--maxProd--minProd thead tr th:nth-child(3) {
+  width: 200px;
+}
+
+#Crop--maxProd--minProd tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#Crop--maxProd--minProd tr:hover {
+  background-color: #ddd;
+}
+
+#Crop--maxProd--minProd th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2c5f2d;
+  color: white;
+}
+
+#Crop--maxProd--minProd thead tr th,
+#Crop--maxProd--minProd tbody tr {
+  text-align: center;
+}
+
+/* ----------------------- Average yield and cultivation ----------------------- */
+
+#Crop--avgYield td,
+#Crop--avgYield th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#Crop--avgYield tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#Crop--avgYield tr:hover {
+  background-color: #ddd;
+}
+
+#Crop--avgYield th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #97bc62;
+  color: white;
+}
+
+#Crop--avgYield thead tr th,
+#Crop--avgYield tbody tr {
+  text-align: center;
+}
+
+#Crop--avgYield tbody tr td:nth-child(1) {
+  text-align: left;
+}
+
+#Crop--avgYield {
+  font-family: Verdana, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 600px;
+  margin: 10px auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#Crop--avgYield thead tr th:nth-child(2),
+#Crop--avgYield thead tr th:nth-child(3) {
+  word-wrap: break-word;
+}
